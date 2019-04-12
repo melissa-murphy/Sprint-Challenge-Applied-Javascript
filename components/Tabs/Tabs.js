@@ -15,11 +15,11 @@ class TabLink {
     if (this.tabData = `all`) {
       // If `all` is true, select all cards regardless of their data attribute values
       // this.cards = ;
-      return this.cards = document.querySelectorAll('.card');
+      this.cards = document.querySelectorAll('.card');
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
-      return this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData.dataset.tab}]`);
+      this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData.dataset.tab}]`);
     }
 
 
@@ -76,6 +76,7 @@ class TabCard {
   selectCard() {
     // Update the style of this.cardElement to display = "flex"
     // this.cardElement;
+    this.cardElement.style.display = 'flex';
   }
 
 }
