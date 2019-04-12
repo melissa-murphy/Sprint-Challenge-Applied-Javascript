@@ -32,13 +32,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+    a. Document Object model is a representation of html elements, with the ability to change to appearance of such elements entirely and a 'tree' file structure.
+
 2. What is an event?
+
+    a. Events are all interactions that a user can have with a website. onClick, onScroll, and onLoad are three commonly used events.
 
 3. What is an event listener?
 
+    a. A function that watches a specific element and waits for a certain interaction to occur, then performs a prespecified action. 
+
 4. Why would we convert a NodeList into an Array?
 
+    a. Nodelists are array like, but do not have all of the methods that are available to arrays.
+
 5. What is a component?
+
+    a. 	1. A fully reusable piece of code that encapsulates an object. Common examples are menus, buttons, and other objects that make up the visual structure of the page.
+
 
 ### Git Set up
 

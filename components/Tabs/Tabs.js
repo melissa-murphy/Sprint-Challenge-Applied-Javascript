@@ -12,14 +12,14 @@ class TabLink {
     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:
 
     // Check to see if this.tabData is equal to 'all'
-    if (this.tabData == `all`) {
+    if (this.tabData === 'all') {
       // If `all` is true, select all cards regardless of their data attribute values
       // this.cards = ;
-      this.cards = document.querySelectorAll('.card');
+      this.cards = document.querySelectorAll(`.card[data-tab]`);
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
-      this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData.dataset.tab}]`);
+      this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData}"]`);
     }
 
 
@@ -28,7 +28,7 @@ class TabLink {
     this.cards = Array.from(this.cards);
 
     this.cards.forEach((cardElement) => {
-      return new TabCard(tabElement);
+      new TabCard(tabElement);
     });
 
     // Add a click event that invokes this.selectTab
@@ -88,7 +88,11 @@ class TabCard {
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each tab as a parameter
 
 */
-const tabs = document.querySelectorAll('.tab');
-tabs.forEach((tabElement) => {
-  return new TabLink(tabElement);
+const tabElement = document.querySelectorAll('.tab');
+// eslint-disable-next-line arrow-parens
+tabElement.forEach(tabElement => {
+  new TabLink(tabElement);
 });
+// tabs.forEach((tabElement) => {
+//   return new TabLink(tabElement);
+// });
