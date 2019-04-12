@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
@@ -28,7 +29,7 @@ class TabLink {
     this.cards = Array.from(this.cards).map(card => {
       this.TabCard = new TabCard(card);
       return this.TabCard;
-    })
+    });
 
     // this.cards.forEach((cardElement) => {
     //   new TabCard(tabElement);
