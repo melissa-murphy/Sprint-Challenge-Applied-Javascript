@@ -13,9 +13,19 @@ class Carousel {
     this.rightArrow.addEventListener('click', () =>
       this.imgRight());
   }
+  imgLeft() {
+    this.imageArrayReversed.forEach((img) => {
+      img.style.display = 'block';
+    });
+  }
+  imgRight() {
+    this.imageArray.forEach((img) => {
+      img.style.display = 'block';
+    });
+  }
 }
 
-let carousel = document.querySelector('.carousel');
+const carousel = document.querySelector('.carousel');
 carousel = new Carousel(carousel);
 
 /* If You've gotten this far, you're on your own! Although we will give you some
